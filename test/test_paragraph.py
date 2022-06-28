@@ -15,7 +15,7 @@ def test_merge_paragraph_comment_revision():
     doc_o = get_doc(doc_file_path_o)
     doc_a = get_doc(doc_file_path_a)
     doc_c = get_doc(doc_file_path_c)
-    print(doc_a.paragraphs[1].revisions['del'][0].text)
+    print(doc_a.paragraphs[1].revisions)
     # merge_paragraph_comment_revision(doc_o, [doc_a, doc_c])
     # doc_o.save('pt0_new.docx')
 

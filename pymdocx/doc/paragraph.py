@@ -1,6 +1,8 @@
 import numpy as np
 
-from pymdocx.common.utils import add_p_comment_next, get_element_comment_revision_matrix, add_comment_2_p_end, \
+from pymdocx.common.comment import add_p_comment_next, add_comment_2_p_end
+from pymdocx.common.revision import add_revision_2_p_end
+from pymdocx.common.utils import get_element_comment_revision_matrix, \
     _get_actual_p_index
 
 
@@ -71,4 +73,5 @@ def merge_paragraph_comment_revision_v2(doc_base_obj, doc_list):
             else:
                 # 获取段落b的批注和修订，合并到last_p中
                 add_comment_2_p_end(last_p, doc_list[doc_index].paragraphs[p_index], doc_base_obj.comments_part.element)
+                add_revision_2_p_end(last_p, doc_list[doc_index].paragraphs[p_index], doc_base_obj.comments_part.element)
     [rp.delete() for rp in remove_p_list]

@@ -29,11 +29,7 @@ def monkey_patch_paragraph():
     def revisions(self):
         rev_ins = self._element.findall(qn('w:ins'))
         rev_del = self._element.findall(qn('w:del'))
-        rev_dict = {
-            'ins': [Revision(ri, self) for ri in rev_ins],
-            'del': [Revision(rd, self)for rd in rev_del],
-        }
-        return rev_dict
+        return [Revision(r, self) for r in rev_ins + rev_del]
     property_ = property(revisions, None, None)
     setattr(Paragraph, 'revisions', property_)
 

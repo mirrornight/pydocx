@@ -20,6 +20,11 @@ class Revision(Parented):
             text += run.del_text
         return text
 
+    @property
+    def tagroot(self):
+        nspfx, tagroot = self.element._nsptag.split(':')
+        return tagroot
+
 
 class Deltext(Parented):
 

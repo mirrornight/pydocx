@@ -39,3 +39,29 @@ def get_del_in_paragraph(p):
     from pymdocx.common.utils import get_label_in_paragraph
     # 获取删除修订
     return get_label_in_paragraph(p, 'del')
+
+
+def parse_p_revision(p_obj):
+    rev_list = []
+    for r in p_obj.revisions:
+        text = '增加：' + r.text if r.tagroot == 'ins' else '删除：' + r.text
+        rev_list.append({
+            'tagroot': r.tagroot,
+            'text': text,
+            'dtime': r.element.date,
+            'author': r.element.author,
+            'initials': '',
+            'id': r.element._id,
+        })
+    return rev_list
+
+
+def add_revision_2_p_end(p1, p2, comment_part_obj):
+    rev_list = parse_p_revision(p2)
+    for r in rev_list:
+        p1.add_comment(r['text'],
+                       author=r['author'],
+                       dtime=r['dtime'],
+                       comment_part=comment_part_obj,
+                       rangeStart=len(p1._p.getchildren()),
+                       rangeEnd=len(p1._p.getchildren()))
