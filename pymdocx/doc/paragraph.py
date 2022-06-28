@@ -1,6 +1,7 @@
 import numpy as np
 
-from pymdocx.common.utils import add_p_comment_next, get_element_comment_revision_matrix
+from pymdocx.common.utils import add_p_comment_next, get_element_comment_revision_matrix, add_comment_2_p_end, \
+    _get_actual_p_index
 
 
 def get_merge_res(m_list):
@@ -31,13 +32,6 @@ def get_merge_res(m_list):
 
 
 def merge_paragraph_comment_revision(doc_base_obj, doc_list):
-    def _get_actual_p_index(has_add_mapping, doc_index, p_index):
-        if doc_index in has_add_mapping.keys():
-            has_add_mapping[doc_index] += 1
-        else:
-            has_add_mapping[doc_index] = 0
-        return p_index - has_add_mapping[doc_index]
-
     m_list = [get_element_comment_revision_matrix(doc) for doc in doc_list]
     merge_arg_dict = get_merge_res(m_list)
 
@@ -54,4 +48,27 @@ def merge_paragraph_comment_revision(doc_base_obj, doc_list):
             add_p_comment_next(last_p, target_p, doc_base_obj.comments_part.element)
             last_p = target_p
             has_add_p_count += 1
+    [rp.delete() for rp in remove_p_list]
+
+
+def merge_paragraph_comment_revision_v2(doc_base_obj, doc_list):
+    m_list = [get_element_comment_revision_matrix(doc) for doc in doc_list]
+    merge_arg_dict = get_merge_res(m_list)
+
+    has_add_mapping = {}
+    has_add_p_count = 0
+    remove_p_list = []
+    for p_index, doc_index_list in merge_arg_dict.items():
+        last_p = doc_base_obj.paragraphs[p_index + has_add_p_count]
+        remove_p_list.append(last_p)
+        for i, doc_index in enumerate(doc_index_list):
+            if i == 0:
+                actual_p_index = _get_actual_p_index(has_add_mapping, doc_index, p_index)
+                target_p = doc_list[doc_index].paragraphs[actual_p_index]
+                add_p_comment_next(last_p, target_p, doc_base_obj.comments_part.element)
+                last_p = target_p
+                has_add_p_count += 1
+            else:
+                # 获取段落b的批注和修订，合并到last_p中
+                add_comment_2_p_end(last_p, doc_list[doc_index].paragraphs[p_index], doc_base_obj.comments_part.element)
     [rp.delete() for rp in remove_p_list]

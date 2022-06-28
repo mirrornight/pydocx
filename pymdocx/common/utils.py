@@ -58,6 +58,17 @@ def add_p_comment_next(p1, p2, comments_part_obj):
     modify_oxml_element_comment_id(p2._p, new_comment_id_list)
 
 
+def add_comment_2_p_end(p1, p2, comment_part_obj):
+    comment_list = parse_p_comment(p2)
+    for c in comment_list:
+        p1.add_comment(c['comment_text'],
+                       author=c['author'],
+                       dtime=c['dtime'],
+                       comment_part=comment_part_obj,
+                       rangeStart=len(p1._p.getchildren()),
+                       rangeEnd=len(p1._p.getchildren()))
+
+
 def add_new_comment(comment_part, author, dtime, comment_text, initials=''):
     comment = comment_part.add_comment(author, initials, dtime)
     comment._add_p(comment_text)
@@ -75,3 +86,11 @@ def modify_oxml_element_comment_id(oxml_element_obj, new_comment_id_list):
         ce.attrib[attr_name] = str(new_comment_id_list[i])
     for i, cr in enumerate(oxml_element_obj.xpath('.//w:commentReference')):
         cr.attrib[attr_name] = str(new_comment_id_list[i])
+
+
+def _get_actual_p_index(has_add_mapping, doc_index, p_index):
+    if doc_index in has_add_mapping.keys():
+        has_add_mapping[doc_index] += 1
+    else:
+        has_add_mapping[doc_index] = 0
+    return p_index - has_add_mapping[doc_index]
