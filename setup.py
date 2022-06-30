@@ -2,12 +2,12 @@ from distutils.core import setup
 from setuptools import find_packages
 
 
-with open("README.md", "r") as f:
+with open("README.rst", "r") as f:
   long_description = f.read()
 
 
 setup(name='pymdocx',  # 包名
-      version='0.3.1',  # 版本号
+      version='0.3.6',  # 版本号
       description='pydocx is a Python library for updating Microsoft Word files.',
       long_description=long_description,
       author='mirrornight',

@@ -33,7 +33,7 @@ def get_merge_res(m_list):
     return merge_arg_dict
 
 
-def merge_paragraph_comment_revision(doc_base_obj, doc_list):
+def merge_paragraph_comment_revision_stack(doc_base_obj, doc_list):
     m_list = [get_element_comment_revision_matrix(doc) for doc in doc_list]
     merge_arg_dict = get_merge_res(m_list)
 
@@ -53,7 +53,7 @@ def merge_paragraph_comment_revision(doc_base_obj, doc_list):
     [rp.delete() for rp in remove_p_list]
 
 
-def merge_paragraph_comment_revision_v2(doc_base_obj, doc_list):
+def merge_paragraph_comment_revision(doc_base_obj, doc_list):
     m_list = [get_element_comment_revision_matrix(doc) for doc in doc_list]
     merge_arg_dict = get_merge_res(m_list)
 

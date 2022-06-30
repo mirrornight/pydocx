@@ -27,7 +27,7 @@ def detect_comment_revision_in_table(doc_obj_list):
     return m
 
 
-def merge_table_comment_revision(doc_base_obj, merge_doc_list):
+def merge_table_comment_revision_stack(doc_base_obj, merge_doc_list):
     detect_dict = detect_comment_revision_in_table(merge_doc_list)
     for t_index, t_v in detect_dict.items():
         for c_index, c_v in t_v.items():
@@ -51,7 +51,7 @@ def merge_table_comment_revision(doc_base_obj, merge_doc_list):
             [rp.delete() for rp in remove_p_list]
 
 
-def merge_table_comment_revision_v2(doc_base_obj, merge_doc_list):
+def merge_table_comment_revision(doc_base_obj, merge_doc_list):
     detect_dict = detect_comment_revision_in_table(merge_doc_list)
     for t_index, t_v in detect_dict.items():
         for c_index, c_v in t_v.items():
