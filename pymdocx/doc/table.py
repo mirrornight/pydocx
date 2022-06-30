@@ -1,6 +1,7 @@
-from pymdocx.common.comment import has_comment
-from pymdocx.common.revision import has_revision
-from pymdocx.common.utils import add_p_comment_next
+from pymdocx.common.comment import has_comment, add_p_comment_next, add_comment_2_p_end
+from pymdocx.common.revision import has_revision, add_revision_2_p_end, remove_revision
+from pymdocx.common.utils import _get_actual_p_index
+from pymdocx.doc.paragraph import _merge_p
 
 
 def detect_comment_revision_in_table(doc_obj_list):
@@ -27,14 +28,6 @@ def detect_comment_revision_in_table(doc_obj_list):
 
 
 def merge_table_comment_revision(doc_base_obj, merge_doc_list):
-    def _get_actual_p_index(has_add_mapping, doc_index, p_index):
-        if doc_index in has_add_mapping.keys():
-            has_add_mapping[doc_index] += 1
-        else:
-            has_add_mapping[doc_index] = 0
-        return p_index - has_add_mapping[doc_index]
-
-
     detect_dict = detect_comment_revision_in_table(merge_doc_list)
     for t_index, t_v in detect_dict.items():
         for c_index, c_v in t_v.items():
@@ -52,6 +45,27 @@ def merge_table_comment_revision(doc_base_obj, merge_doc_list):
                         add_p_comment_next(last_p, target_p, doc_base_obj.comments_part.element)
                         last_p = target_p
                         has_add_p_count += 1
+                    else:
+                        if base_p in remove_p_list:
+                            remove_p_list.remove(base_p)
+            [rp.delete() for rp in remove_p_list]
+
+
+def merge_table_comment_revision_v2(doc_base_obj, merge_doc_list):
+    detect_dict = detect_comment_revision_in_table(merge_doc_list)
+    for t_index, t_v in detect_dict.items():
+        for c_index, c_v in t_v.items():
+            has_add_p_count = 0
+            remove_p_list = []
+            has_add_mapping = {}
+            for p_index, doc_index_list in c_v.items():
+                base_p = last_p = doc_base_obj.tables[t_index]._cells[c_index].paragraphs[p_index + has_add_p_count]
+                remove_p_list.append(last_p)
+                for i, doc_index in enumerate(doc_index_list):
+                    merge_doc_paragraphs = merge_doc_list[doc_index].tables[t_index]._cells[c_index].paragraphs
+                    if merge_doc_paragraphs:
+                        has_add_p_count, last_p = _merge_p(i, has_add_mapping, doc_index, p_index, merge_doc_paragraphs, last_p,
+                                               doc_base_obj.comments_part.element, has_add_p_count, remove_p_list)
                     else:
                         if base_p in remove_p_list:
                             remove_p_list.remove(base_p)

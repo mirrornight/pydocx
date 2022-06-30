@@ -1,7 +1,7 @@
 import numpy as np
 
-from pymdocx.common.comment import add_p_comment_next, add_comment_2_p_end
-from pymdocx.common.revision import add_revision_2_p_end
+from pymdocx.common.comment import add_p_comment_next, add_comment_2_p_end, has_comment
+from pymdocx.common.revision import add_revision_2_p_end, remove_revision, has_revision
 from pymdocx.common.utils import get_element_comment_revision_matrix, \
     _get_actual_p_index
 
@@ -64,14 +64,28 @@ def merge_paragraph_comment_revision_v2(doc_base_obj, doc_list):
         last_p = doc_base_obj.paragraphs[p_index + has_add_p_count]
         remove_p_list.append(last_p)
         for i, doc_index in enumerate(doc_index_list):
-            if i == 0:
-                actual_p_index = _get_actual_p_index(has_add_mapping, doc_index, p_index)
-                target_p = doc_list[doc_index].paragraphs[actual_p_index]
-                add_p_comment_next(last_p, target_p, doc_base_obj.comments_part.element)
-                last_p = target_p
-                has_add_p_count += 1
-            else:
-                # 获取段落b的批注和修订，合并到last_p中
-                add_comment_2_p_end(last_p, doc_list[doc_index].paragraphs[p_index], doc_base_obj.comments_part.element)
-                add_revision_2_p_end(last_p, doc_list[doc_index].paragraphs[p_index], doc_base_obj.comments_part.element)
+            merge_doc_paragraphs = doc_list[doc_index].paragraphs
+            has_add_p_count, last_p = _merge_p(i, has_add_mapping, doc_index, p_index, merge_doc_paragraphs, last_p,
+                                               doc_base_obj.comments_part.element, has_add_p_count, remove_p_list)
+
     [rp.delete() for rp in remove_p_list]
+
+
+def _merge_p(i, has_add_mapping, doc_index, p_index, merge_doc_paragraphs,
+             last_p, comments_part_obj, has_add_p_count, remove_p_list):
+    if i == 0:
+        target_p = merge_doc_paragraphs[_get_actual_p_index(has_add_mapping, doc_index, p_index)]
+        if has_comment(target_p):
+            add_p_comment_next(last_p, target_p, comments_part_obj)
+            last_p = target_p
+            has_add_p_count += 1
+        else:
+            has_add_mapping[doc_index] -= 1
+            remove_p_list.remove(last_p)
+        if has_revision(target_p):
+            add_revision_2_p_end(last_p, target_p, comments_part_obj)
+            remove_revision(last_p)
+    else:
+        add_comment_2_p_end(last_p, merge_doc_paragraphs[p_index], comments_part_obj)
+        add_revision_2_p_end(last_p, merge_doc_paragraphs[p_index], comments_part_obj)
+    return has_add_p_count, last_p

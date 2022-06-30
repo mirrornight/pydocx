@@ -65,3 +65,13 @@ def add_revision_2_p_end(p1, p2, comment_part_obj):
                        comment_part=comment_part_obj,
                        rangeStart=len(p1._p.getchildren()),
                        rangeEnd=len(p1._p.getchildren()))
+
+
+def remove_revision(p):
+    for r in p.revisions:
+        pp = r._rev.getparent()
+        if r.tagroot == 'ins':
+            pp.remove(r._rev)
+        elif r.tagroot == 'del':
+            new_run = p.add_run(r.text, '4')
+            pp.replace(r._rev, new_run._r)
