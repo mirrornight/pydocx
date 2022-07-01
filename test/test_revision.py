@@ -1,10 +1,7 @@
 import os
 
 from pymdocx.common.utils import get_doc
-
 from pymdocx.common.revision import get_ins_in_paragraph
-
-from pymdocx.common.comment import get_comment_xml
 
 DIR_PATH = './../data/test_p'
 
