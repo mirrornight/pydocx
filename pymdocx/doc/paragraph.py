@@ -1,5 +1,4 @@
 import numpy as np
-from pprint import pprint
 
 from pymdocx.common.comment import add_p_comment_next, add_comment_2_p_end, has_comment
 from pymdocx.common.revision import add_revision_2_p_end, remove_revision, has_revision
@@ -94,21 +93,22 @@ def _merge_p(i, has_add_mapping, doc_index, p_index, merge_doc_paragraphs,
 
 def parse_paragraph_differences(doc_base_obj, doc_list):
     m_num = len(doc_list)
-    merge_dict = {-1: {"correspond_p": [-1 for _ in range(m_num)], "new_p": [[] for _ in range(m_num)]}}
+    merge_dict = {}
+    dm_cursor = [-1 for _ in range(m_num)]
     for dbpi, dbp in enumerate(doc_base_obj.paragraphs):
-        merge_dict[dbpi] = {"correspond_p": [None for _ in range(m_num)], "new_p": [[] for _ in range(m_num)],
-                            # 'p_str': dbp.text
-                            }
+        merge_dict[dbpi] = {"correspond_p": [None for _ in range(m_num)], "new_p": [[] for _ in range(m_num)], 'correspond_p_m': [0 for _ in range(m_num)]}
         for dmi, d in enumerate(doc_list):
-            next_p = merge_dict[dbpi-1]['correspond_p'][dmi] + 1 if merge_dict[dbpi-1]['correspond_p'][dmi] != None else 0
-            for dmpi, dmp in enumerate(d.paragraphs[next_p:]):
+            next_p = dm_cursor[dmi] + 1
+            for dmpi, dmp in enumerate(d.paragraphs[next_p:], start=next_p):
+                dm_cursor[dmi] = dmpi
                 if dmp.origin_text.strip() == dbp.text.strip():
-                    merge_dict[dbpi]['correspond_p'][dmi] = dmpi + next_p
+                    merge_dict[dbpi]['correspond_p'][dmi] = dmpi
+                    if has_comment(dmp) or has_revision(dmp):
+                        merge_dict[dbpi]['correspond_p_m'][dmi] = 1
                     break
                 else:
-                    merge_dict[dbpi]['new_p'][dmi].append(dmpi + next_p)
-    del merge_dict[-1]
-    pprint(merge_dict)
+                    merge_dict[dbpi]['new_p'][dmi].append(dmpi)
+    return merge_dict
 
 
 merge_paragraph_comment_revision = merge_paragraph_comment_revision_stack

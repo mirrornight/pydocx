@@ -1,4 +1,5 @@
 import os
+from pprint import pprint
 
 from pymdocx.common.utils import get_doc
 from pymdocx.doc.paragraph import merge_paragraph_comment_revision, parse_paragraph_differences
@@ -16,7 +17,8 @@ def test_parse_paragraph_differences():
     doc_o = get_doc(doc_file_path_o)
     doc_a = get_doc(doc_file_path_a)
     doc_c = get_doc(doc_file_path_c)
-    parse_paragraph_differences(doc_o, [doc_a, doc_c])
+    print(1)
+    pprint(parse_paragraph_differences(doc_o, [doc_a, doc_c]))
 
 
 def test_merge_paragraph_comment_revision():
