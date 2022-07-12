@@ -1,13 +1,13 @@
 import os
 
 from pymdocx.common.utils import get_doc
-from pymdocx.doc.paragraph import merge_paragraph_comment_revision
+from pymdocx.doc.paragraph import merge_paragraph_comment_revision, parse_paragraph_differences
 
 DIR_PATH = './../data/test_p'
 OUTPUT_PATH = './../data/output'
 
 
-def test_merge_paragraph_comment_revision_stack():
+def test_parse_paragraph_differences():
 
     doc_file_path_o = os.path.join(DIR_PATH, "pt0_0.docx")
     doc_file_path_a = os.path.join(DIR_PATH, "pt0_a.docx")
@@ -16,8 +16,7 @@ def test_merge_paragraph_comment_revision_stack():
     doc_o = get_doc(doc_file_path_o)
     doc_a = get_doc(doc_file_path_a)
     doc_c = get_doc(doc_file_path_c)
-    print(doc_a.paragraphs[1].revisions)
-    # doc_o.save('pt0_new.docx')
+    parse_paragraph_differences(doc_o, [doc_a, doc_c])
 
 
 def test_merge_paragraph_comment_revision():

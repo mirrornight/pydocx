@@ -1,4 +1,5 @@
 import numpy as np
+from pprint import pprint
 
 from pymdocx.common.comment import add_p_comment_next, add_comment_2_p_end, has_comment
 from pymdocx.common.revision import add_revision_2_p_end, remove_revision, has_revision
@@ -53,7 +54,7 @@ def merge_paragraph_comment_revision_stack(doc_base_obj, doc_list):
     [rp.delete() for rp in remove_p_list]
 
 
-def merge_paragraph_comment_revision(doc_base_obj, doc_list):
+def merge_paragraph_comment_revision_end(doc_base_obj, doc_list):
     m_list = [get_element_comment_revision_matrix(doc) for doc in doc_list]
     merge_arg_dict = get_merge_res(m_list)
 
@@ -89,3 +90,25 @@ def _merge_p(i, has_add_mapping, doc_index, p_index, merge_doc_paragraphs,
         add_comment_2_p_end(last_p, merge_doc_paragraphs[p_index], comments_part_obj)
         add_revision_2_p_end(last_p, merge_doc_paragraphs[p_index], comments_part_obj)
     return has_add_p_count, last_p
+
+
+def parse_paragraph_differences(doc_base_obj, doc_list):
+    m_num = len(doc_list)
+    merge_dict = {-1: {"correspond_p": [-1 for _ in range(m_num)], "new_p": [[] for _ in range(m_num)]}}
+    for dbpi, dbp in enumerate(doc_base_obj.paragraphs):
+        merge_dict[dbpi] = {"correspond_p": [None for _ in range(m_num)], "new_p": [[] for _ in range(m_num)],
+                            # 'p_str': dbp.text
+                            }
+        for dmi, d in enumerate(doc_list):
+            next_p = merge_dict[dbpi-1]['correspond_p'][dmi] + 1 if merge_dict[dbpi-1]['correspond_p'][dmi] != None else 0
+            for dmpi, dmp in enumerate(d.paragraphs[next_p:]):
+                if dmp.origin_text.strip() == dbp.text.strip():
+                    merge_dict[dbpi]['correspond_p'][dmi] = dmpi + next_p
+                    break
+                else:
+                    merge_dict[dbpi]['new_p'][dmi].append(dmpi + next_p)
+    del merge_dict[-1]
+    pprint(merge_dict)
+
+
+merge_paragraph_comment_revision = merge_paragraph_comment_revision_stack
