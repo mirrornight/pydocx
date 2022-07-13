@@ -33,6 +33,12 @@ def get_merge_res(m_list):
     return merge_arg_dict
 
 
+def p_bold_italic(p):
+    for r in p.runs:
+        r.bold = True
+        r.italic = True
+
+
 def merge_paragraph_comment_revision_stack(doc_base_obj, doc_list):
     m_list = [get_element_comment_revision_matrix(doc) for doc in doc_list]
     merge_arg_dict = get_merge_res(m_list)
@@ -43,12 +49,14 @@ def merge_paragraph_comment_revision_stack(doc_base_obj, doc_list):
     for p_index, doc_index_list in merge_arg_dict.items():
         last_p = doc_base_obj.paragraphs[p_index + has_add_p_count]
         remove_p_list.append(last_p)
-        for doc_index in doc_index_list:
+        for i, doc_index in enumerate(doc_index_list):
             actual_p_index = _get_actual_p_index(has_add_mapping, doc_index, p_index)
             target_p = doc_list[doc_index].paragraphs[actual_p_index]
             # 添加段落后，target_p所在文档结构发生变化
             add_p_comment_next(last_p, target_p, doc_base_obj.comments_part.element)
             last_p = target_p
+            if i > 0:
+                p_bold_italic(last_p)
             has_add_p_count += 1
     [rp.delete() for rp in remove_p_list]
 
