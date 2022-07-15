@@ -1,7 +1,7 @@
 from pymdocx.common.comment import has_comment, add_p_comment_next, add_comment_2_p_end
 from pymdocx.common.revision import has_revision, add_revision_2_p_end, remove_revision
 from pymdocx.common.utils import _get_actual_p_index
-from pymdocx.doc.paragraph import _merge_p
+from pymdocx.doc.paragraph import _merge_p, p_bold_italic
 
 
 def detect_comment_revision_in_table(doc_obj_list):
@@ -37,13 +37,15 @@ def merge_table_comment_revision_stack(doc_base_obj, merge_doc_list):
             for p_index, doc_index_list in c_v.items():
                 base_p = last_p = doc_base_obj.tables[t_index]._cells[c_index].paragraphs[p_index + has_add_p_count]
                 remove_p_list.append(last_p)
-                for doc_index in doc_index_list:
+                for i, doc_index in enumerate(doc_index_list):
                     merge_doc_obj = merge_doc_list[doc_index]
                     if merge_doc_obj.tables[t_index]._cells[c_index].paragraphs:
                         actual_p_index = _get_actual_p_index(has_add_mapping, doc_index, p_index)
                         target_p = merge_doc_obj.tables[t_index]._cells[c_index].paragraphs[actual_p_index]
                         add_p_comment_next(last_p, target_p, doc_base_obj.comments_part.element)
                         last_p = target_p
+                        if i > 0:
+                            p_bold_italic(last_p)
                         has_add_p_count += 1
                     else:
                         if base_p in remove_p_list:
