@@ -48,9 +48,12 @@ def add_new_comment(comment_part, author, dtime, comment_text, initials=''):
     return comment._id
 
 
-def add_p_comment_next(p1, p2, comments_part_obj):
+def add_p(p1, p2, comments_part_obj, direction='next'):
     # 添加段落p及其批注
-    p1._p.addnext(p2._p)
+    if direction == 'next':
+        p1._p.addnext(p2._p)
+    elif direction == 'previous':
+        p1._p.addprevious(p2._p)
     comment_list = parse_p_comment(p2)
     new_comment_id_list = []
     for comment in comment_list:

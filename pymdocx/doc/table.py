@@ -1,4 +1,4 @@
-from pymdocx.common.comment import has_comment, add_p_comment_next, add_comment_2_p_end
+from pymdocx.common.comment import has_comment, add_p, add_comment_2_p_end
 from pymdocx.common.revision import has_revision, add_revision_2_p_end, remove_revision
 from pymdocx.common.utils import _get_actual_p_index
 from pymdocx.doc.paragraph import _merge_p, p_bold_italic
@@ -42,7 +42,7 @@ def merge_table_comment_revision_stack(doc_base_obj, merge_doc_list):
                     if merge_doc_obj.tables[t_index]._cells[c_index].paragraphs:
                         actual_p_index = _get_actual_p_index(has_add_mapping, doc_index, p_index)
                         target_p = merge_doc_obj.tables[t_index]._cells[c_index].paragraphs[actual_p_index]
-                        add_p_comment_next(last_p, target_p, doc_base_obj.comments_part.element)
+                        add_p(last_p, target_p, doc_base_obj.comments_part.element)
                         last_p = target_p
                         if i > 0:
                             p_bold_italic(last_p)

@@ -1,6 +1,6 @@
 import numpy as np
 
-from pymdocx.common.comment import add_p_comment_next, add_comment_2_p_end, has_comment
+from pymdocx.common.comment import add_p, add_comment_2_p_end, has_comment
 from pymdocx.common.revision import add_revision_2_p_end, remove_revision, has_revision
 from pymdocx.common.utils import get_element_comment_revision_matrix, \
     _get_actual_p_index
@@ -53,7 +53,7 @@ def merge_paragraph_comment_revision_stack(doc_base_obj, doc_list):
             actual_p_index = _get_actual_p_index(has_add_mapping, doc_index, p_index)
             target_p = doc_list[doc_index].paragraphs[actual_p_index]
             # 添加段落后，target_p所在文档结构发生变化
-            add_p_comment_next(last_p, target_p, doc_base_obj.comments_part.element)
+            add_p(last_p, target_p, doc_base_obj.comments_part.element)
             last_p = target_p
             if i > 0:
                 p_bold_italic(last_p)
@@ -84,7 +84,7 @@ def _merge_p(i, has_add_mapping, doc_index, p_index, merge_doc_paragraphs,
     if i == 0:
         target_p = merge_doc_paragraphs[_get_actual_p_index(has_add_mapping, doc_index, p_index)]
         if has_comment(target_p):
-            add_p_comment_next(last_p, target_p, comments_part_obj)
+            add_p(last_p, target_p, comments_part_obj)
             last_p = target_p
             has_add_p_count += 1
         else:
@@ -99,24 +99,60 @@ def _merge_p(i, has_add_mapping, doc_index, p_index, merge_doc_paragraphs,
     return has_add_p_count, last_p
 
 
-def parse_paragraph_differences(doc_base_obj, doc_list):
-    m_num = len(doc_list)
-    merge_dict = {}
-    dm_cursor = [-1 for _ in range(m_num)]
-    for dbpi, dbp in enumerate(doc_base_obj.paragraphs):
-        merge_dict[dbpi] = {"correspond_p": [None for _ in range(m_num)], "new_p": [[] for _ in range(m_num)], 'correspond_p_m': [0 for _ in range(m_num)]}
-        for dmi, d in enumerate(doc_list):
-            next_p = dm_cursor[dmi] + 1
-            for dmpi, dmp in enumerate(d.paragraphs[next_p:], start=next_p):
-                dm_cursor[dmi] = dmpi
-                if dmp.origin_text.strip() == dbp.text.strip():
-                    merge_dict[dbpi]['correspond_p'][dmi] = dmpi
-                    if has_comment(dmp) or has_revision(dmp):
-                        merge_dict[dbpi]['correspond_p_m'][dmi] = 1
-                    break
-                else:
-                    merge_dict[dbpi]['new_p'][dmi].append(dmpi)
-    return merge_dict
+class MergePStack:
+    def __init__(self, doc_base_p, p_list, doc_base_comments_part_element):
+        self.doc_base_p = doc_base_p
+        self.p_list = p_list
+        self.doc_base_comments_part_element = doc_base_comments_part_element
+        self.m_num = len(self.p_list)
+
+        self.merge_blueprint_dict = {}
+        self.remove_p_list = []
+
+    def parse_paragraph_differences(self):
+        dm_cursor = [-1 for _ in range(self.m_num)]
+        for dbpi, dbp in enumerate(self.doc_base_p):
+            self.merge_blueprint_dict[dbpi] = {"correspond_p":   [None for _ in range(self.m_num)],
+                                               "new_p":          [[] for _ in range(self.m_num)],
+                                               'correspond_p_m': [0 for _ in range(self.m_num)]}
+            for dmi, p in enumerate(self.p_list):
+                next_p = dm_cursor[dmi] + 1
+                for dmpi, dmp in enumerate(p[next_p:], start=next_p):
+                    dm_cursor[dmi] = dmpi
+                    if dmp.origin_text.strip() == dbp.text.strip():
+                        self.merge_blueprint_dict[dbpi]['correspond_p'][dmi] = dmpi
+                        if has_comment(dmp) or has_revision(dmp):
+                            self.merge_blueprint_dict[dbpi]['correspond_p_m'][dmi] = 1
+                        break
+                    else:
+                        self.merge_blueprint_dict[dbpi]['new_p'][dmi].append(dmpi)
+
+    def add_p_previous(self, start_p, new_p_index_list, m_d_index):
+        for new_p_index in new_p_index_list:
+            target_p = self.p_list[m_d_index][new_p_index]
+            add_p(start_p, target_p, self.doc_base_comments_part_element, direction='previous')
+            start_p = target_p
+        return start_p
+
+    def add_p_next(self, end_p, is_m, m_p_index, m_d_index):
+        if is_m:
+            target_p = self.p_list[m_d_index][m_p_index]
+            add_p(end_p, target_p, self.doc_base_comments_part_element)
+            end_p = target_p
+            if m_d_index > 0:
+                p_bold_italic(end_p)
+        return end_p
+
+    def __call__(self, *args, **kwargs):
+        self.parse_paragraph_differences()
+        for base_p_index, merge_info in self.merge_blueprint_dict.items():
+            start_p = end_p = self.doc_base_p[base_p_index]
+            if any(merge_info['correspond_p_m']):
+                self.remove_p_list.append(start_p)
+            for m_d_index in range(self.m_num):
+                start_p = self.add_p_previous(start_p, merge_info['new_p'][m_d_index], m_d_index)
+                end_p = self.add_p_next(end_p, merge_info['correspond_p_m'][m_d_index], merge_info['correspond_p'][m_d_index], m_d_index)
+        [rp.delete() for rp in self.remove_p_list]
 
 
 merge_paragraph_comment_revision = merge_paragraph_comment_revision_stack
