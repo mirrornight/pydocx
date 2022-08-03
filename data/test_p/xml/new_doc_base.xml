@@ -1,672 +1,440 @@
-<w:body xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" xmlns:cx="http://schemas.microsoft.com/office/drawing/2014/chartex" xmlns:cx1="http://schemas.microsoft.com/office/drawing/2015/9/8/chartex" xmlns:cx2="http://schemas.microsoft.com/office/drawing/2015/10/21/chartex" xmlns:cx3="http://schemas.microsoft.com/office/drawing/2016/5/9/chartex" xmlns:cx4="http://schemas.microsoft.com/office/drawing/2016/5/10/chartex" xmlns:cx5="http://schemas.microsoft.com/office/drawing/2016/5/11/chartex" xmlns:cx6="http://schemas.microsoft.com/office/drawing/2016/5/12/chartex" xmlns:cx7="http://schemas.microsoft.com/office/drawing/2016/5/13/chartex" xmlns:cx8="http://schemas.microsoft.com/office/drawing/2016/5/14/chartex" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:aink="http://schemas.microsoft.com/office/drawing/2016/ink" xmlns:am3d="http://schemas.microsoft.com/office/drawing/2017/model3d" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml" xmlns:w16cex="http://schemas.microsoft.com/office/word/2018/wordml/cex" xmlns:w16cid="http://schemas.microsoft.com/office/word/2016/wordml/cid" xmlns:w16="http://schemas.microsoft.com/office/word/2018/wordml" xmlns:w16sdtdh="http://schemas.microsoft.com/office/word/2020/wordml/sdtdatahash" xmlns:w16se="http://schemas.microsoft.com/office/word/2015/wordml/symex" xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape">
-  <w:p>
-    <w:pPr>
-      <w:pStyle w:val="3"/>
-      <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF"/>
-      <w:spacing w:before="0" w:beforeAutospacing="0" w:after="0" w:afterAutospacing="0" w:line="360" w:lineRule="atLeast"/>
-      <w:rPr>
-        <w:rFonts w:hint="eastAsia" w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:b/>
-        <w:bCs/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-    </w:pPr>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:hint="eastAsia" w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:b/>
-        <w:bCs/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>第一章：</w:t>
-    </w:r>
-    <w:commentRangeStart w:id="0"/>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:hint="eastAsia" w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:b/>
-        <w:bCs/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>华为的崛起</w:t>
-    </w:r>
-    <w:commentRangeEnd w:id="0"/>
-    <w:r>
-      <w:commentReference w:id="0"/>
-    </w:r>
-  </w:p>
-  <w:p>
-    <w:pPr>
-      <w:pStyle w:val="3"/>
-      <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF"/>
-      <w:spacing w:before="0" w:beforeAutospacing="0" w:after="0" w:afterAutospacing="0" w:line="360" w:lineRule="atLeast"/>
-      <w:ind w:firstLine="420"/>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-    </w:pPr>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>“在乘用车领域</w:t>
-    </w:r>
-    <w:ins w:id="0" w:author="mirror night" w:date="2021-12-23T17:28:23Z">
+<w:document xmlns:wpc="http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:m="http://schemas.openxmlformats.org/officeDocument/2006/math" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:wp14="http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:w14="http://schemas.microsoft.com/office/word/2010/wordml" xmlns:w10="urn:schemas-microsoft-com:office:word" xmlns:w15="http://schemas.microsoft.com/office/word/2012/wordml" xmlns:wpg="http://schemas.microsoft.com/office/word/2010/wordprocessingGroup" xmlns:wpi="http://schemas.microsoft.com/office/word/2010/wordprocessingInk" xmlns:wne="http://schemas.microsoft.com/office/word/2006/wordml" xmlns:wps="http://schemas.microsoft.com/office/word/2010/wordprocessingShape" xmlns:wpsCustomData="http://www.wps.cn/officeDocument/2013/wpsCustomData" mc:Ignorable="w14 w15 wp14">
+  <w:body>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF"/>
+        <w:spacing w:before="0" w:beforeAutospacing="0" w:after="0" w:afterAutospacing="0" w:line="360" w:lineRule="atLeast"/>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+          <w:b/>
+          <w:bCs/>
+          <w:color w:val="333333"/>
+        </w:rPr>
+      </w:pPr>
       <w:r>
         <w:rPr>
           <w:rFonts w:hint="eastAsia" w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+          <w:b/>
+          <w:bCs/>
           <w:color w:val="333333"/>
-          <w:lang w:val="en-US" w:eastAsia="zh-Hans"/>
         </w:rPr>
-        <w:t>增加</w:t>
+        <w:t>第一章：华为的崛起</w:t>
       </w:r>
-    </w:ins>
-    <w:ins w:id="1" w:author="mirror night" w:date="2021-12-23T17:28:24Z">
-      <w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF"/>
+        <w:spacing w:before="0" w:beforeAutospacing="0" w:after="0" w:afterAutospacing="0" w:line="360" w:lineRule="atLeast"/>
+        <w:ind w:firstLine="420"/>
         <w:rPr>
-          <w:rFonts w:hint="default" w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+          <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
           <w:color w:val="333333"/>
-          <w:lang w:eastAsia="zh-Hans"/>
         </w:rPr>
-        <w:t>1</w:t>
-      </w:r>
-    </w:ins>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>，预计到</w:t>
-    </w:r>
-    <w:del w:id="2" w:author="mirror night" w:date="2021-12-23T17:28:39Z">
+      </w:pPr>
       <w:r>
         <w:rPr>
           <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
           <w:color w:val="333333"/>
         </w:rPr>
-        <w:delText>2025</w:delText>
+        <w:t>“</w:t>
       </w:r>
-    </w:del>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>年智能驾驶</w:t>
-    </w:r>
-    <w:commentRangeStart w:id="2"/>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>汽车</w:t>
-    </w:r>
-    <w:commentRangeEnd w:id="2"/>
-    <w:r>
-      <w:commentReference w:id="2"/>
-    </w:r>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>销量将超过800万辆，市场巨大。在商用及专用车领域，全国有300多座露天煤矿、50多个沿海港口、40多个智能网联示范区有智能驾驶车辆需求。”</w:t>
-    </w:r>
-  </w:p>
-  <w:p>
-    <w:pPr>
-      <w:pStyle w:val="3"/>
-      <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF"/>
-      <w:spacing w:before="0" w:beforeAutospacing="0" w:after="0" w:afterAutospacing="0" w:line="360" w:lineRule="atLeast"/>
-      <w:ind w:firstLine="420"/>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-    </w:pPr>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>“在乘用车领域</w:t>
-    </w:r>
-    <w:ins w:id="0" w:author="mirror night" w:date="2021-12-23T17:29:53Z">
       <w:r>
         <w:rPr>
-          <w:rFonts w:hint="eastAsia" w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+          <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
           <w:color w:val="333333"/>
-          <w:lang w:val="en-US" w:eastAsia="zh-Hans"/>
+          <w:u w:val="single"/>
         </w:rPr>
-        <w:t>增加</w:t>
+        <w:t>在乘用车领域</w:t>
       </w:r>
-    </w:ins>
-    <w:ins w:id="1" w:author="mirror night" w:date="2021-12-23T17:29:54Z">
+      <w:ins w:id="0" w:author="mirror night" w:date="2021-12-23T17:29:53Z">
+        <w:r>
+          <w:rPr>
+            <w:rFonts w:hint="eastAsia" w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+            <w:color w:val="333333"/>
+            <w:u w:val="single"/>
+            <w:lang w:val="en-US" w:eastAsia="zh-Hans"/>
+          </w:rPr>
+          <w:t>增加</w:t>
+        </w:r>
+      </w:ins>
+      <w:ins w:id="1" w:author="mirror night" w:date="2021-12-23T17:29:54Z">
+        <w:r>
+          <w:rPr>
+            <w:rFonts w:hint="default" w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+            <w:color w:val="333333"/>
+            <w:u w:val="single"/>
+            <w:lang w:eastAsia="zh-Hans"/>
+          </w:rPr>
+          <w:t>2</w:t>
+        </w:r>
+      </w:ins>
       <w:r>
         <w:rPr>
-          <w:rFonts w:hint="default" w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+          <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
           <w:color w:val="333333"/>
-          <w:lang w:eastAsia="zh-Hans"/>
+          <w:u w:val="single"/>
         </w:rPr>
-        <w:t>2</w:t>
+        <w:t>，预计到</w:t>
       </w:r>
-    </w:ins>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>，预计到</w:t>
-    </w:r>
-    <w:del w:id="2" w:author="mirror night" w:date="2021-12-23T17:30:07Z">
+      <w:del w:id="2" w:author="mirror night" w:date="2021-12-23T17:30:07Z">
+        <w:r>
+          <w:rPr>
+            <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+            <w:color w:val="333333"/>
+            <w:u w:val="single"/>
+          </w:rPr>
+          <w:delText>2025</w:delText>
+        </w:r>
+      </w:del>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+          <w:color w:val="333333"/>
+          <w:u w:val="single"/>
+        </w:rPr>
+        <w:t>年智能驾驶</w:t>
+      </w:r>
+      <w:commentRangeStart w:id="0"/>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+          <w:color w:val="333333"/>
+          <w:u w:val="single"/>
+        </w:rPr>
+        <w:t>汽车</w:t>
+      </w:r>
+      <w:commentRangeEnd w:id="0"/>
+      <w:r>
+        <w:rPr>
+          <w:u w:val="single"/>
+        </w:rPr>
+        <w:commentReference w:id="0"/>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+          <w:color w:val="333333"/>
+          <w:u w:val="single"/>
+        </w:rPr>
+        <w:t>销量将超过800万辆，市场巨大。在商用及专用车领域，全国有300多座露天煤矿、50多个沿海港口、40多个智能网联示范区有智能驾驶车辆需求</w:t>
+      </w:r>
       <w:r>
         <w:rPr>
           <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
           <w:color w:val="333333"/>
         </w:rPr>
-        <w:delText>2025</w:delText>
+        <w:t>。”</w:t>
       </w:r>
-    </w:del>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>年智能驾驶</w:t>
-    </w:r>
-    <w:commentRangeStart w:id="4"/>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>汽车</w:t>
-    </w:r>
-    <w:commentRangeEnd w:id="4"/>
-    <w:r>
-      <w:commentReference w:id="4"/>
-    </w:r>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>销量将超过800万辆，市场巨大。在商用及专用车领域，全国有300多座露天煤矿、50多个沿海港口、40多个智能网联示范区有智能驾驶车辆需求。”</w:t>
-    </w:r>
-    <w:bookmarkStart w:id="0" w:name="_GoBack"/>
-    <w:bookmarkEnd w:id="0"/>
-  </w:p>
-  <w:p>
-    <w:pPr>
-      <w:pStyle w:val="3"/>
-      <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF"/>
-      <w:spacing w:before="0" w:beforeAutospacing="0" w:after="0" w:afterAutospacing="0" w:line="360" w:lineRule="atLeast"/>
-      <w:ind w:firstLine="420"/>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-    </w:pPr>
-    <w:commentRangeStart w:id="6"/>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>12月21日</w:t>
-    </w:r>
-    <w:commentRangeEnd w:id="6"/>
-    <w:r>
-      <w:commentReference w:id="6"/>
-    </w:r>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>，2021华为智能汽车解决方案生态论坛在线上举行，华为智能汽车解决方案BU MDC领域总经理</w:t>
-    </w:r>
-    <w:commentRangeStart w:id="8"/>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>李振亚</w:t>
-    </w:r>
-    <w:commentRangeEnd w:id="8"/>
-    <w:r>
-      <w:commentReference w:id="8"/>
-    </w:r>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>发布了华为对未来智能驾驶汽车市场的最新研判</w:t>
-    </w:r>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:hint="eastAsia" w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>。</w:t>
-    </w:r>
-  </w:p>
-  <w:p w14:paraId="11267A53" w14:textId="0C2F8BE3" w:rsidR="00BB619D" w:rsidRDefault="00BB619D" w:rsidP="00BB619D">
-    <w:pPr>
-      <w:pStyle w:val="a3"/>
-      <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF"/>
-      <w:spacing w:before="0" w:beforeAutospacing="0" w:after="0" w:afterAutospacing="0" w:line="360" w:lineRule="atLeast"/>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-    </w:pPr>
-  </w:p>
-  <w:p w14:paraId="17162CC1" w14:textId="4962B852" w:rsidR="00BB619D" w:rsidRPr="00BB619D" w:rsidRDefault="00BB619D" w:rsidP="00BB619D">
-    <w:pPr>
-      <w:pStyle w:val="a3"/>
-      <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF"/>
-      <w:spacing w:before="0" w:beforeAutospacing="0" w:after="0" w:afterAutospacing="0" w:line="360" w:lineRule="atLeast"/>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial" w:hint="eastAsia"/>
-        <w:b/>
-        <w:bCs/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-    </w:pPr>
-    <w:r w:rsidRPr="00BB619D">
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial" w:hint="eastAsia"/>
-        <w:b/>
-        <w:bCs/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>第二章：华为的新胜</w:t>
-    </w:r>
-  </w:p>
-  <w:p w14:paraId="2B7F51C6" w14:textId="77777777" w:rsidR="007860B8" w:rsidRDefault="007860B8" w:rsidP="00BB619D">
-    <w:pPr>
-      <w:pStyle w:val="a3"/>
-      <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF"/>
-      <w:spacing w:before="0" w:beforeAutospacing="0" w:after="0" w:afterAutospacing="0" w:line="360" w:lineRule="atLeast"/>
-      <w:ind w:firstLine="420"/>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-    </w:pPr>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>在这个线上会议中，华为发布了</w:t>
-    </w:r>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>“2021</w:t>
-    </w:r>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>年度华为智能汽车解决方案优秀合作伙伴</w:t>
-    </w:r>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>”</w:t>
-    </w:r>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>名单，共计</w:t>
-    </w:r>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>57</w:t>
-    </w:r>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>家合作伙伴获奖。</w:t>
-    </w:r>
-  </w:p>
-  <w:p w14:paraId="4E70D000" w14:textId="77777777" w:rsidR="007860B8" w:rsidRDefault="007860B8" w:rsidP="007860B8">
-    <w:pPr>
-      <w:pStyle w:val="a3"/>
-      <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF"/>
-      <w:spacing w:before="0" w:beforeAutospacing="0" w:after="0" w:afterAutospacing="0" w:line="360" w:lineRule="atLeast"/>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-    </w:pPr>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>A</w:t>
-    </w:r>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>股市场上，获奖的华为合作伙伴主要有，上声电子</w:t>
-    </w:r>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>“20CM”</w:t>
-    </w:r>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>涨停，德赛西威</w:t>
-    </w:r>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>“10CM”</w:t>
-    </w:r>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>涨停，东箭科技上涨</w:t>
-    </w:r>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>8.8%</w:t>
-    </w:r>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>，光峰科技上涨</w:t>
-    </w:r>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>6.57%</w:t>
-    </w:r>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>，中科创达、浙江世宝涨</w:t>
-    </w:r>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>4%</w:t>
-    </w:r>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>。</w:t>
-    </w:r>
-  </w:p>
-  <w:p w14:paraId="6712420D" w14:textId="6846FF00" w:rsidR="007860B8" w:rsidRDefault="007860B8" w:rsidP="00992BC5">
-    <w:pPr>
-      <w:pStyle w:val="a3"/>
-      <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF"/>
-      <w:spacing w:before="0" w:beforeAutospacing="0" w:after="0" w:afterAutospacing="0" w:line="360" w:lineRule="atLeast"/>
-      <w:ind w:firstLine="420"/>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-    </w:pPr>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>德赛西威成为华为的合作伙伴，星空君还是挺吃惊的，因为从二者的产品线来说，应该是竞争对手。德赛西威做的自动驾驶、芯片等业务，都是华为的重点布局。</w:t>
-    </w:r>
-  </w:p>
-  <w:p>
-    <w:pPr>
-      <w:pStyle w:val="3"/>
-      <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF"/>
-      <w:spacing w:before="0" w:beforeAutospacing="0" w:after="0" w:afterAutospacing="0" w:line="360" w:lineRule="atLeast"/>
-      <w:rPr>
-        <w:rFonts w:hint="eastAsia" w:ascii="Arial" w:hAnsi="Arial" w:eastAsia="宋体" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-        <w:lang w:val="en-US" w:eastAsia="zh-Hans"/>
-      </w:rPr>
-    </w:pPr>
-    <w:ins w:id="3" w:author="mirror night" w:date="2022-02-15T16:44:40Z">
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF"/>
+        <w:spacing w:before="0" w:beforeAutospacing="0" w:after="0" w:afterAutospacing="0" w:line="360" w:lineRule="atLeast"/>
+        <w:ind w:firstLine="420"/>
+        <w:rPr>
+          <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+          <w:color w:val="333333"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+          <w:b/>
+          <w:bCs/>
+          <w:i/>
+          <w:iCs/>
+          <w:color w:val="333333"/>
+        </w:rPr>
+        <w:t>12月21日，2021华为智能汽车解决方案生态论坛在线上举行，华为智能汽车解决方案BU MDC领域总经理李振亚发布了华为对未来智能驾驶汽车市场的最新研判</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+          <w:color w:val="333333"/>
+        </w:rPr>
+        <w:t>。</w:t>
+      </w:r>
+      <w:ins w:id="3" w:author="mirror night" w:date="2022-07-11T17:15:53Z">
+        <w:r>
+          <w:rPr>
+            <w:rFonts w:hint="default" w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+            <w:color w:val="333333"/>
+          </w:rPr>
+          <w:t xml:space="preserve"> </w:t>
+        </w:r>
+      </w:ins>
       <w:bookmarkStart w:id="0" w:name="_GoBack"/>
+      <w:bookmarkEnd w:id="0"/>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF"/>
+        <w:spacing w:before="0" w:beforeAutospacing="0" w:after="0" w:afterAutospacing="0" w:line="360" w:lineRule="atLeast"/>
+        <w:rPr>
+          <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+          <w:color w:val="333333"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF"/>
+        <w:spacing w:before="0" w:beforeAutospacing="0" w:after="0" w:afterAutospacing="0" w:line="360" w:lineRule="atLeast"/>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+          <w:b/>
+          <w:bCs/>
+          <w:color w:val="333333"/>
+        </w:rPr>
+      </w:pPr>
       <w:r>
         <w:rPr>
           <w:rFonts w:hint="eastAsia" w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+          <w:b/>
+          <w:bCs/>
           <w:color w:val="333333"/>
-          <w:lang w:val="en-US" w:eastAsia="zh-Hans"/>
         </w:rPr>
-        <w:t>费劲儿覅金额非</w:t>
+        <w:t>第二章：华为的新胜</w:t>
       </w:r>
-    </w:ins>
-    <w:ins w:id="4" w:author="mirror night" w:date="2022-02-15T16:44:47Z">
-      <w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF"/>
+        <w:spacing w:before="0" w:beforeAutospacing="0" w:after="0" w:afterAutospacing="0" w:line="360" w:lineRule="atLeast"/>
+        <w:ind w:firstLine="420"/>
         <w:rPr>
-          <w:rFonts w:hint="eastAsia" w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+          <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
           <w:color w:val="333333"/>
-          <w:lang w:val="en-US" w:eastAsia="zh-Hans"/>
         </w:rPr>
-        <w:t>分解机覅二军覅二接军覅二军覅二军覅二几iiiifiejifjeijfiejfijeifjeifj</w:t>
-      </w:r>
-    </w:ins>
-    <w:bookmarkEnd w:id="0"/>
-  </w:p>
-  <w:p w14:paraId="2A2F5F33" w14:textId="500F053E" w:rsidR="00992BC5" w:rsidRPr="00992BC5" w:rsidRDefault="00992BC5" w:rsidP="00992BC5">
-    <w:pPr>
-      <w:pStyle w:val="a3"/>
-      <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF"/>
-      <w:spacing w:before="0" w:beforeAutospacing="0" w:after="0" w:afterAutospacing="0" w:line="360" w:lineRule="atLeast"/>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial" w:hint="eastAsia"/>
-        <w:b/>
-        <w:bCs/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-    </w:pPr>
-    <w:r w:rsidRPr="00992BC5">
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial" w:hint="eastAsia"/>
-        <w:b/>
-        <w:bCs/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>第三章：华为强势</w:t>
-    </w:r>
-  </w:p>
-  <w:p>
-    <w:pPr>
-      <w:pStyle w:val="3"/>
-      <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF"/>
-      <w:spacing w:before="0" w:beforeAutospacing="0" w:after="0" w:afterAutospacing="0" w:line="360" w:lineRule="atLeast"/>
-      <w:ind w:firstLine="420"/>
-      <w:rPr>
-        <w:del w:id="5" w:author="mirror night" w:date="2022-02-15T16:43:23Z"/>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-    </w:pPr>
-    <w:del w:id="6" w:author="mirror night" w:date="2022-02-15T16:43:23Z">
+      </w:pPr>
       <w:r>
         <w:rPr>
           <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
           <w:color w:val="333333"/>
         </w:rPr>
-        <w:delText>二者合作的什么呢？查了一下双方签署的合作协议：全场景智慧出行生态解决方案合作协议，围绕HiCar解决方案平台级合作、测试能力共建、车载生态联合创新等方面建立深度合作项目。</w:delText>
+        <w:t>在这个线上会议中，华为发布了“2021年度华为智能汽车解决方案优秀合作伙伴”名单，共</w:t>
       </w:r>
-    </w:del>
-  </w:p>
-  <w:p w14:paraId="4D523501" w14:textId="77777777" w:rsidR="007860B8" w:rsidRDefault="007860B8" w:rsidP="007860B8">
-    <w:pPr>
-      <w:pStyle w:val="a3"/>
-      <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF"/>
-      <w:spacing w:before="0" w:beforeAutospacing="0" w:after="0" w:afterAutospacing="0" w:line="360" w:lineRule="atLeast"/>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-    </w:pPr>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>也就是说，在德赛西威的车机上，落地</w:t>
-    </w:r>
-    <w:proofErr w:type="spellStart"/>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>HiCar</w:t>
-    </w:r>
-    <w:proofErr w:type="spellEnd"/>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>等，主要是软件和生态合作。</w:t>
-    </w:r>
-  </w:p>
-  <w:p w14:paraId="65C834B0" w14:textId="77777777" w:rsidR="007860B8" w:rsidRDefault="007860B8" w:rsidP="007860B8">
-    <w:pPr>
-      <w:pStyle w:val="a3"/>
-      <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF"/>
-      <w:spacing w:before="0" w:beforeAutospacing="0" w:after="0" w:afterAutospacing="0" w:line="360" w:lineRule="atLeast"/>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-    </w:pPr>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>但是从硬件来说，是实打实的竞争对手。</w:t>
-    </w:r>
-  </w:p>
-  <w:p w14:paraId="4C9A2F29" w14:textId="2391171D" w:rsidR="007860B8" w:rsidRPr="00382CE7" w:rsidRDefault="00382CE7" w:rsidP="007860B8">
-    <w:pPr>
-      <w:pStyle w:val="a3"/>
-      <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF"/>
-      <w:spacing w:before="0" w:beforeAutospacing="0" w:after="0" w:afterAutospacing="0" w:line="360" w:lineRule="atLeast"/>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:b/>
-        <w:bCs/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-    </w:pPr>
-    <w:r w:rsidRPr="00382CE7">
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial" w:hint="eastAsia"/>
-        <w:b/>
-        <w:bCs/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>第四章：</w:t>
-    </w:r>
-    <w:r w:rsidR="007860B8" w:rsidRPr="00382CE7">
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:b/>
-        <w:bCs/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>东箭科技</w:t>
-    </w:r>
-  </w:p>
-  <w:p w14:paraId="52100EF6" w14:textId="77777777" w:rsidR="007860B8" w:rsidRDefault="007860B8" w:rsidP="00382CE7">
-    <w:pPr>
-      <w:pStyle w:val="a3"/>
-      <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF"/>
-      <w:spacing w:before="0" w:beforeAutospacing="0" w:after="0" w:afterAutospacing="0" w:line="360" w:lineRule="atLeast"/>
-      <w:ind w:firstLine="420"/>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-    </w:pPr>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>东箭智能的智能座舱产品计划矩阵分为：电动舒适模块（电动门、电动尾门、电吸锁、电动座椅等）、智能安全模块（安全检测、碰撞预警等）、智能健康模块（空气净化器、车内生命监测等）等模块。</w:t>
-    </w:r>
-  </w:p>
-  <w:p w14:paraId="4D1ACFC1" w14:textId="77777777" w:rsidR="007860B8" w:rsidRDefault="007860B8" w:rsidP="007860B8">
-    <w:pPr>
-      <w:pStyle w:val="a3"/>
-      <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF"/>
-      <w:spacing w:before="0" w:beforeAutospacing="0" w:after="0" w:afterAutospacing="0" w:line="360" w:lineRule="atLeast"/>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-    </w:pPr>
-    <w:r>
-      <w:rPr>
-        <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
-        <w:color w:val="333333"/>
-      </w:rPr>
-      <w:t>公司和华为的合作，也是智能座舱范畴。</w:t>
-    </w:r>
-  </w:p>
-  <w:p w14:paraId="2DF02D30" w14:textId="77777777" w:rsidR="007860B8" w:rsidRPr="007860B8" w:rsidRDefault="007860B8"/>
-  <w:sectPr w:rsidR="007860B8" w:rsidRPr="007860B8">
-    <w:pgSz w:w="11906" w:h="16838"/>
-    <w:pgMar w:top="1440" w:right="1800" w:bottom="1440" w:left="1800" w:header="851" w:footer="992" w:gutter="0"/>
-    <w:cols w:space="425"/>
-    <w:docGrid w:type="lines" w:linePitch="312"/>
-  </w:sectPr>
-</w:body>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+          <w:color w:val="333333"/>
+          <w:u w:val="none"/>
+        </w:rPr>
+        <w:t>计57家合作</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+          <w:color w:val="333333"/>
+        </w:rPr>
+        <w:t>伙伴获奖。</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF"/>
+        <w:spacing w:before="0" w:beforeAutospacing="0" w:after="0" w:afterAutospacing="0" w:line="360" w:lineRule="atLeast"/>
+        <w:rPr>
+          <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+          <w:color w:val="333333"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+          <w:color w:val="333333"/>
+        </w:rPr>
+        <w:t>A股市场上，获奖的华为合作伙伴主要有，上声电子“20CM”涨停，德赛西威“10CM”涨停，东箭科技上涨8.8%，光峰科技上涨6.57%，中科创达、浙江世宝涨4%。</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF"/>
+        <w:spacing w:before="0" w:beforeAutospacing="0" w:after="0" w:afterAutospacing="0" w:line="360" w:lineRule="atLeast"/>
+        <w:ind w:firstLine="420"/>
+        <w:rPr>
+          <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+          <w:color w:val="333333"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+          <w:color w:val="333333"/>
+        </w:rPr>
+        <w:t>德赛西威成为华为的合作伙伴，星空君还是挺吃惊的，因为从二者的产品线来说，应该是竞争对手。德赛西威做的自动驾驶、芯片等业务，都是华为的重点布局。</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF"/>
+        <w:spacing w:before="0" w:beforeAutospacing="0" w:after="0" w:afterAutospacing="0" w:line="360" w:lineRule="atLeast"/>
+        <w:rPr>
+          <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+          <w:color w:val="333333"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF"/>
+        <w:spacing w:before="0" w:beforeAutospacing="0" w:after="0" w:afterAutospacing="0" w:line="360" w:lineRule="atLeast"/>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+          <w:b/>
+          <w:bCs/>
+          <w:color w:val="333333"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+          <w:b/>
+          <w:bCs/>
+          <w:color w:val="333333"/>
+        </w:rPr>
+        <w:t>第三章：华为强势</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF"/>
+        <w:spacing w:before="0" w:beforeAutospacing="0" w:after="0" w:afterAutospacing="0" w:line="360" w:lineRule="atLeast"/>
+        <w:ind w:firstLine="420"/>
+        <w:rPr>
+          <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+          <w:color w:val="333333"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+          <w:color w:val="333333"/>
+        </w:rPr>
+        <w:t>二者合作的什么呢？查了一下双方签署的合作协议：全场景智慧出行生态解决方案合作协议，围绕HiCar解决方案平台级合作、测试能力共建、车载生态联合创新等方面建立深度合作项目。</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF"/>
+        <w:spacing w:before="0" w:beforeAutospacing="0" w:after="0" w:afterAutospacing="0" w:line="360" w:lineRule="atLeast"/>
+        <w:rPr>
+          <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+          <w:color w:val="333333"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+          <w:color w:val="333333"/>
+        </w:rPr>
+        <w:t>也就是说，在德赛西威的车机上，落地HiCar等，主要是软件和生态合作。</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF"/>
+        <w:spacing w:before="0" w:beforeAutospacing="0" w:after="0" w:afterAutospacing="0" w:line="360" w:lineRule="atLeast"/>
+        <w:rPr>
+          <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+          <w:color w:val="333333"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+          <w:color w:val="333333"/>
+        </w:rPr>
+        <w:t>但是从硬件来说，是实打实的竞争对手。</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF"/>
+        <w:spacing w:before="0" w:beforeAutospacing="0" w:after="0" w:afterAutospacing="0" w:line="360" w:lineRule="atLeast"/>
+        <w:rPr>
+          <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+          <w:b/>
+          <w:bCs/>
+          <w:color w:val="333333"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:hint="eastAsia" w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+          <w:b/>
+          <w:bCs/>
+          <w:color w:val="333333"/>
+        </w:rPr>
+        <w:t>第四章：</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+          <w:b/>
+          <w:bCs/>
+          <w:color w:val="333333"/>
+        </w:rPr>
+        <w:t>东箭科技</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF"/>
+        <w:spacing w:before="0" w:beforeAutospacing="0" w:after="0" w:afterAutospacing="0" w:line="360" w:lineRule="atLeast"/>
+        <w:ind w:firstLine="420"/>
+        <w:rPr>
+          <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+          <w:color w:val="333333"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+          <w:color w:val="333333"/>
+        </w:rPr>
+        <w:t>东箭智能的智能座舱产品计划矩阵分为：电动舒适模块（电动门、电动尾门、电吸锁、电动座椅等）、智能安全模块（安全检测、碰撞预警等）、智能健康模块（空气净化器、车内生命监测等）等模块。</w:t>
+      </w:r>
+    </w:p>
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+        <w:shd w:val="clear" w:color="auto" w:fill="FFFFFF"/>
+        <w:spacing w:before="0" w:beforeAutospacing="0" w:after="0" w:afterAutospacing="0" w:line="360" w:lineRule="atLeast"/>
+        <w:rPr>
+          <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+          <w:color w:val="333333"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:cs="Arial"/>
+          <w:color w:val="333333"/>
+        </w:rPr>
+        <w:t>公司和华为的合作，也是智能座舱范畴。</w:t>
+      </w:r>
+    </w:p>
+    <w:p/>
+    <w:sectPr>
+      <w:pgSz w:w="11906" w:h="16838"/>
+      <w:pgMar w:top="1440" w:right="1800" w:bottom="1440" w:left="1800" w:header="851" w:footer="992" w:gutter="0"/>
+      <w:cols w:space="425" w:num="1"/>
+      <w:docGrid w:type="lines" w:linePitch="312" w:charSpace="0"/>
+    </w:sectPr>
+  </w:body>
+</w:document>
