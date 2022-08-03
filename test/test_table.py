@@ -12,7 +12,7 @@ def test_merge_table_comment_revision():
     doc_o_path = os.path.join(DIR_PATH, 't_base.docx')
     doc_a_path = os.path.join(DIR_PATH, 't_base_1.docx')
     doc_b_path = os.path.join(DIR_PATH, 't_base_2.docx')
-    output_file_path = os.path.join(DIR_PATH, "t_base_new.docx")
+    output_file_path = os.path.join(OUTPUT_PATH, "t_base_new.docx")
 
     doc_o = get_doc(doc_o_path)
     doc_a = get_doc(doc_a_path)
@@ -25,7 +25,7 @@ def test_mergetstack():
     doc_o_path = os.path.join(DIR_PATH, 't_base.docx')
     doc_a_path = os.path.join(DIR_PATH, 't_base_1.docx')
     doc_b_path = os.path.join(DIR_PATH, 't_base_2.docx')
-    output_file_path = os.path.join(DIR_PATH, "t_base_new.docx")
+    output_file_path = os.path.join(OUTPUT_PATH, "t_base_new.docx")
 
     doc_o = get_doc(doc_o_path)
     doc_a = get_doc(doc_a_path)

@@ -36,9 +36,8 @@ def test_mergepend():
     doc_c_1 = get_doc(doc_file_path_c_1)
     print(1)
     m = MergePStack(doc_o.paragraphs, [doc_a.paragraphs, doc_c.paragraphs, doc_c_1.paragraphs], doc_o.comments_part.element)
-    m.parse_paragraph_differences()
-    pprint(m.merge_blueprint_dict)
     m()
+    pprint(m.merge_blueprint_dict)
     doc_o.save(output_file_path)
 
 
