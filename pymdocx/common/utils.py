@@ -12,10 +12,10 @@ def get_label_in_paragraph(p, label_name):
     xml = p._p.xml
     if full_label_name in xml:
         tree = etree.fromstring(xml)
-        ins = tree.xpath('//' + full_label_name, namespaces=WORD_NAMESPACE)
+        labels = tree.xpath('//' + full_label_name, namespaces=WORD_NAMESPACE)
     else:
-        ins = []
-    return ins
+        labels = []
+    return labels
 
 
 def print_xml_node(lxml_obj):

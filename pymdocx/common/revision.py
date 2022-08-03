@@ -18,11 +18,14 @@ def get_revision(doc_file_path):
 
 
 def has_revision_ins(p):
-    return 1 if get_ins_in_paragraph(p) else 0
+    # 去除自闭和标签
+    has_ins = [e for e in get_ins_in_paragraph(p) if len(e) > 0]
+    return 1 if has_ins else 0
 
 
 def has_revision_del(p):
-    return 1 if get_del_in_paragraph(p) else 0
+    has_del = [e for e in get_del_in_paragraph(p) if len(e) > 0]
+    return 1 if has_del else 0
 
 
 def has_revision(p):

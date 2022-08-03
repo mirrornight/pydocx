@@ -1,7 +1,7 @@
 from pymdocx.common.comment import has_comment, add_p, add_comment_2_p_end
 from pymdocx.common.revision import has_revision, add_revision_2_p_end, remove_revision
 from pymdocx.common.utils import _get_actual_p_index
-from pymdocx.doc.paragraph import _merge_p, p_bold_italic
+from pymdocx.doc.paragraph import _merge_p, p_bold_italic, MergePStack
 
 
 def detect_comment_revision_in_table(doc_obj_list):
@@ -72,6 +72,50 @@ def merge_table_comment_revision_end(doc_base_obj, merge_doc_list):
                         if base_p in remove_p_list:
                             remove_p_list.remove(base_p)
             [rp.delete() for rp in remove_p_list]
+
+
+class MergeTStack:
+    def __init__(self, doc_base_t, t_list, doc_base_comments_part_element):
+        self.doc_base_t = doc_base_t
+        self.t_list = t_list
+        self.doc_base_comments_part_element = doc_base_comments_part_element
+        self.m_num = len(self.t_list)
+        self.merge_cell_dict = {}
+
+    def detect_merge_cell_in_table(self):
+        """
+        {
+        table_index: {cell_index: need_merge_bool}}
+        }
+        """
+        for t_index, t in enumerate(self.doc_base_t):
+            for c_index, c in enumerate(t._cells):
+                need_merge_bool = False
+                for m_t in self.t_list:
+                    if len(m_t[t_index]._cells[c_index].paragraphs) > len(c.paragraphs):
+                        need_merge_bool = True
+                        break
+                    p_break = 0
+                    for p in m_t[t_index]._cells[c_index].paragraphs:
+                        if has_comment(p) or has_revision(p):
+                            need_merge_bool = True
+                            p_break = 1
+                            break
+                    if p_break:
+                        break
+                if need_merge_bool:
+                    if t_index not in self.merge_cell_dict:
+                        self.merge_cell_dict[t_index] = {c_index: 1}
+                    elif c_index not in self.merge_cell_dict[t_index]:
+                        self.merge_cell_dict[t_index][c_index] = 1
+
+    def __call__(self, *args, **kwargs):
+        self.detect_merge_cell_in_table()
+        for t_index, m_c_dict in self.merge_cell_dict.items():
+            for c_index in m_c_dict.keys():
+                MergePStack(self.doc_base_t[t_index]._cells[c_index].paragraphs,
+                            [t[t_index]._cells[c_index].paragraphs for t in self.t_list], self.doc_base_comments_part_element)()
+
 
 
 merge_table_comment_revision = merge_table_comment_revision_stack

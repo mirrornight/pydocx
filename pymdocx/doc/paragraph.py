@@ -113,7 +113,8 @@ class MergePStack:
         dm_cursor = [-1 for _ in range(self.m_num)]
         for dbpi, dbp in enumerate(self.doc_base_p):
             self.merge_blueprint_dict[dbpi] = {"correspond_p":   [None for _ in range(self.m_num)],
-                                               "new_p":          [[] for _ in range(self.m_num)],
+                                               "new_p_pre":          [[] for _ in range(self.m_num)],
+                                               "new_p_next":         [[] for _ in range(self.m_num)],
                                                'correspond_p_m': [0 for _ in range(self.m_num)]}
             for dmi, p in enumerate(self.p_list):
                 next_p = dm_cursor[dmi] + 1
@@ -125,7 +126,10 @@ class MergePStack:
                             self.merge_blueprint_dict[dbpi]['correspond_p_m'][dmi] = 1
                         break
                     else:
-                        self.merge_blueprint_dict[dbpi]['new_p'][dmi].append(dmpi)
+                        self.merge_blueprint_dict[dbpi]['new_p_pre'][dmi].append(dmpi)
+                next_p = dm_cursor[dmi] + 1
+                for dmpi, dmp in enumerate(p[next_p:], start=next_p):
+                    self.merge_blueprint_dict[dbpi]['new_p_next'][dmi].append(dmpi)
 
     def add_p_previous(self, start_p, new_p_index_list, m_d_index):
         for new_p_index in new_p_index_list:
@@ -134,13 +138,14 @@ class MergePStack:
             start_p = target_p
         return start_p
 
-    def add_p_next(self, end_p, is_m, m_p_index, m_d_index):
+    def add_p_next(self, end_p, is_m, m_p_index_list, m_d_index, bold_italic=False):
         if is_m:
-            target_p = self.p_list[m_d_index][m_p_index]
-            add_p(end_p, target_p, self.doc_base_comments_part_element)
-            end_p = target_p
-            if m_d_index > 0:
-                p_bold_italic(end_p)
+            for m_p_index in m_p_index_list:
+                target_p = self.p_list[m_d_index][m_p_index]
+                add_p(end_p, target_p, self.doc_base_comments_part_element)
+                end_p = target_p
+                if m_d_index > 0 and bold_italic:
+                    p_bold_italic(end_p)
         return end_p
 
     def __call__(self, *args, **kwargs):
@@ -150,8 +155,10 @@ class MergePStack:
             if any(merge_info['correspond_p_m']):
                 self.remove_p_list.append(start_p)
             for m_d_index in range(self.m_num):
-                start_p = self.add_p_previous(start_p, merge_info['new_p'][m_d_index], m_d_index)
-                end_p = self.add_p_next(end_p, merge_info['correspond_p_m'][m_d_index], merge_info['correspond_p'][m_d_index], m_d_index)
+                start_p = self.add_p_previous(start_p, merge_info['new_p_pre'][m_d_index], m_d_index)
+                end_p = self.add_p_next(end_p, merge_info['correspond_p_m'][m_d_index], [merge_info['correspond_p'][m_d_index]], m_d_index, bold_italic=True)
+            for m_d_index in range(self.m_num):
+                end_p = self.add_p_next(end_p, merge_info['new_p_next'][m_d_index], merge_info['new_p_next'][m_d_index], m_d_index)
         [rp.delete() for rp in self.remove_p_list]
 
 
