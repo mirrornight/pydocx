@@ -1,7 +1,7 @@
 What is pydocx?
 ===============
 
-pydocx is a Python library for updating Microsoft Word files.
+pydocx is a Python library for merging revised and commented Microsoft Word files.
 
 Installation
 ------------

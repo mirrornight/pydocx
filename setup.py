@@ -7,8 +7,8 @@ with open("README.rst", "r") as f:
 
 
 setup(name='pymdocx',  # 包名
-      version='0.3.9',  # 版本号
-      description='pydocx is a Python library for updating Microsoft Word files.',
+      version='0.4.0',  # 版本号
+      description='pydocx is a Python library for merging revised and commented Microsoft Word files.',
       long_description=long_description,
       author='mirrornight',
       author_email='mirrornighth@gmail.com',
