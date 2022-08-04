@@ -98,7 +98,7 @@ class MergePStack:
                 self.remove_p_list.append(start_p)
             for m_d_index in range(self.m_num):
                 start_p = self.add_p_previous(start_p, merge_info['new_p_pre'][m_d_index], m_d_index)
-                end_p = self.add_p_next(end_p, merge_info['correspond_p_m'][m_d_index], [merge_info['correspond_p'][m_d_index]], m_d_index, bold_italic=True)
+                end_p = self.add_p_next(end_p, merge_info['correspond_p_m'][m_d_index], [merge_info['correspond_p'][m_d_index]], m_d_index, bold_italic=any(merge_info['correspond_p_m'][:m_d_index]))
             for m_d_index in range(self.m_num):
                 end_p = self.add_p_next(end_p, merge_info['new_p_next'][m_d_index], merge_info['new_p_next'][m_d_index], m_d_index)
         [rp.delete() for rp in self.remove_p_list]
