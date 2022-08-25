@@ -61,7 +61,7 @@ class MergePStack:
                 next_p = dm_cursor[dmi] + 1
                 for dmpi, dmp in enumerate(p[next_p:], start=next_p):
                     dm_cursor[dmi] = dmpi
-                    if dmp.origin_text.strip() == dbp.text.strip():
+                    if dmp.origin_text.strip() == dbp.full_text.strip():
                         self.merge_blueprint_dict[dbpi]['correspond_p'][dmi] = dmpi
                         if has_comment(dmp) or has_revision(dmp):
                             self.merge_blueprint_dict[dbpi]['correspond_p_m'][dmi] = 1
